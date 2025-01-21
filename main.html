@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieCaptain</title>
+    <link rel="icon" type="image/x-icon" href="icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito%3Ai%2Cbi%2C700%2C300%2C400&amp;display=swap" rel="stylesheet" nonce="">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        window.onload = function() {
+            const sidebar = document.getElementById("mySidebar");
+            const hamburgerIcon = document.querySelector(".hamburger i");
+            const body = document.body;
+            const mainContent = document.querySelector('main');
+            const footer = document.querySelector('footer');
+            sidebar.style.transition = "0s";
+            sidebar.style.width = "0";
+            hamburgerIcon.classList.remove("fa-x");
+            hamburgerIcon.classList.add("fa-bars");
+            body.classList.remove("pinned");
+            mainContent.style.marginLeft = "0";
+            footer.style.marginLeft = "0";
+            setTimeout(() => {
+                sidebar.style.transition = "0.5s";
+            }, 500);
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.togglefaq').click(function(e) {
+                e.preventDefault();
+                var notthis = $('.active').not(this);
+                notthis.find('i').css('transform', 'rotate(0deg)'); // Reset rotation
+                notthis.toggleClass('active').next('.faqanswer').slideToggle(300);
+                $(this).toggleClass('active').next().slideToggle("fast");
+                var icon = $(this).children('i');
+                icon.css('transition', 'transform 0.3s'); // Add transition for smooth rotation
+                if ($(this).hasClass('active')) {
+                    icon.css('transform', 'rotate(90deg)'); // Rotate when opening
+                } else {
+                    icon.css('transform', 'rotate(0deg)'); // Rotate back when collapsing
+                }
+            });
+        });
+    </script>
+    <div class="top-nav-bar">
+        <a href="#"><img src="homebutton.png" alt="Logo"></a>
+        <span class="hamburger" onclick="toggleSidebar()"><i class="fas fa-bars"></i></span>
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <a class="current-page" href="#">Home</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <header>
+        <h1 data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-once="true">CookieCaptain
+        </h1>
+        <p data-aos="fade-up"
+           data-aos-duration="1000"
+           data-aos-delay="300"
+           data-aos-once="true">
+            The ideal channel for learning how to type faster and getting familiar with mechanical keyboards
+        </p>
+    </header>
+    <main>
+        <section>
+            <div data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-once="true">
+                <h2>About</h2>
+                <p>CookieCaptain is a rising independent YouTube channel that creates straightforward videos where you can find best methods to type faster and more accurately with every practice session and get familiar with the basics of mechanical keyboards such as how they work and how you can build your own custom keyboard.</p>
+            </div>
+        </section>
+        <section>
+            <div class="text-with-images">
+                <div class="text"
+                     data-aos="fade-up"
+                     data-aos-duration="1000"
+                     data-aos-once="true">
+                    <h2>Progress With Every Keypress</h2>
+                    <p>With everyone using computers nowadays, whether it be for school, work, or daily tasks, being able to type quickly is a very important skill to spend less time writing text and enhance your productivity and efficiency, and there are a number of abilities you need to master to achieve this. As a typist that reaches over 200 WPM and gained 170+ WPM by practicing for 3 years, my goal is to teach as many people as possible to develop this skill by practicing the right way so that they improve with every key they press.</p>
+                </div>
+                <div class="images">
+                    <img src="60s-200wpm.png"
+                         alt="Image 1"
+                         data-aos="zoom-in"
+                         data-aos-duration="1000"
+                         data-aos-delay="300"
+                         data-aos-once="true">
+                </div>
+            </div>
+            <div class="text-with-images">
+                <div class="images">
+                    <img src="20250114_164651.jpg" alt="Image 1"
+                         data-aos="zoom-in"
+                         data-aos-duration="1000"
+                         data-aos-delay="300"
+                         data-aos-once="true">
+                </div>
+                <div class="text"
+                     data-aos="fade-up"
+                     data-aos-duration="1000"
+                     data-aos-once="true">
+                    <h2>Getting Started with Mechanical Keyboards</h2>
+                    <p>The keyboard that you are using is also a very important factor that affects how you type, and using one that you're comfortable with will greatly improve your typing skills. Building a mechanical keyboard for yourself offers a number of benefits and allows you to precisely meet all of your preferences such as the typing feel and sound as you can pick out every part for yourself. With my guides and reviews, this channel will make it a lot easier to understand the basics of mechanical keyboards and decide if you should get one, as well as assist you through choosing and building your own custom keyboard and recognizing what to consider.</p>
+                </div>
+            </div>
+        </section>
+        <section class="photo-card-section">
+            <div data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-once="true">
+                <div class="videos-header">
+                    <h2>Videos</h2>
+                    <a class="see-all" href="videos.html">See all</a>
+                </div>
+                <div class="photo-card">
+                    <a href="https://www.youtube.com/watch?v=QwKGgQBn_7s" target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-once="true">
+                        <img src="https://i.ytimg.com/vi/QwKGgQBn_7s/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLChiJFAvZXgyg0PYqNt6998MMf6Bw" alt="Video Thumbnail">
+                        <p>CookieCaptain Intro Video</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div style="clear: both;"></div>
+        <section style="border-top: 1px solid #0a1928;">
+            <div data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-once="true">
+                <h2>Resources</h2>
+                <p>Related websites that I use</p>
+                <div class="photo-card">
+                    <a class="resource" href="https://monkeytype.com" target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-once="true">
+                        <img src="https://monkeytype.com/images/mtsocial.png" alt="Monkeytype">
+                        <p>Monkeytype | A minimalistic, customizable typing test</p>
+                        <p class="description">The most customizable typing test website with a minimal design and a ton of features. Test yourself in various modes, track your progress and improve your...</p>
+                    </a>
+                </div>
+                <div class="photo-card">
+                    <a class="resource" href="https://play.typeracer.com/" target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                    data-aos-delay="300">
+                        <img src="data:image/jpeg;base64,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" alt="TypeRacer">
+                        <p>TypeRacer - Play Typing Games and Race Friends</p>
+                        <p class="description">Test your typing skills today! Play against real live people from all over the world. TypeRacer is the best free massively multiplayer online competitive...</p>
+                    </a>
+                </div>
+                <div class="photo-card">
+                    <a class="resource" href="https://caniusevia.com/" target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                    data-aos-delay="600">
+                        <img src="data:image/png;base64,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" alt="TypeRacer">
+                        <p>VIA</p>
+                        <p class="description">Configure, test and design in one place - VIA is the last application you'll need for your keyboard. Read the docs.</p>
+                    </a>
+                </div>
+                <div class="photo-card">
+                    <a class="resource" href="https://kbdfans.com/" target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-once="true">
+                        <img src="data:image/png;base64,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" alt="KBDfans">
+                        <p>KBDfans – KBDfans® Mechanical Keyboards Store</p>
+                        <p class="description">Build your own mechanical keyboard, starting here!</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div style="border-bottom: 1px solid #0a1928; clear: both;"></div>
+        <section>
+            <div data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                    data-aos-delay="300">
+                        <a href="#" class="togglefaq"><i class="fas fa-chevron-right"></i>What is the best way to improve my typing speed?</a>
+                        <div class="faqanswer">
+                            <p>If you want to really increase your typing speed, the only thing that I can say is to keep on practicing and always be mindful of how you're doing it so that you develop the right muscle memory to type efficiently and accurately.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                    data-aos-delay="600">
+                        <a href="#" class="togglefaq"><i class="fas fa-chevron-right"></i>How can I increase my typing accuracy?</a>
+                        <div class="faqanswer">
+                            <p>To improve your accuracy, don't rush when you're typing and always maintain a mindset that focuses on the keys you're pressing so that you know you're hitting the right ones. That way, you won't have to sacrifice any of your accuracy to gain speed.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                    data-aos-delay="900">
+                        <a href="#" class="togglefaq"><i class="fas fa-chevron-right"></i>What are the benefits of using a mechanical keyboard?</a>
+                        <div class="faqanswer">
+                            <p>There are many benefits to using a mechanical keyboard, such as their durability, responsiveness, aesthetics, typing feel and sound, and customizability, enhancing productivity and efficiency for users typing on a keyboard with maximum comfort.</p>
+                        </div>    
+                    </div>
+                    <div class="faq-item"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                    data-aos-delay="1200">
+                        <a href="#" class="togglefaq"><i class="fas fa-chevron-right"></i>How do I choose the right mechanical keyboard for me?</a>
+                        <div class="faqanswer">
+                            <p>To find the right mechanical keyboard that suits your needs and preferences, there are a number of factors you'll want to look at in each part, such as their shape, material, mechanism, and many more properties. If you want all of these to be exactly how you want it, I recommend buiding your own custom mechanical keyboard which I'll have a guide for in the future.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                    data-aos-delay="1500">
+                        <a href="#" class="togglefaq"><i class="fas fa-chevron-right"></i>What inspired you to start the CookieCaptain YouTube channel?</a>
+                        <div class="faqanswer">
+                            <p>I was inspired to start CookieCaptain and make this type of content by other YouTubers that I like to watch such as MythicalRocket, Shazity, Hipyo Tech, Switch and Click, and more. I decided that I also want to use my skills and knowledge to teach others who are interested in getting started in this field.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a class="footer-text" href="#">&copy; CookieCaptain</a>
+        <div class="icons"><a href="https://www.youtube.com/@CookieCaptain"target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/people/CookieCaptain/61571955525210/" target="_blank"><i class="fab fa-facebook"></i></a></div>
+        <a class="footer-contact-info" href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a>
+    </footer>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const hamburgerIcon = document.querySelector(".hamburger i");
+            const body = document.body;
+            const mainContent = document.querySelector('main');
+            const footer = document.querySelector('footer');
+            const header = document.querySelector('header');
+            const textWithImages = document.querySelectorAll('.text-with-images');
+            const resourceDescriptions = document.querySelectorAll('.photo-card .description');
+            if (sidebar.style.width === "85%" || sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                hamburgerIcon.classList.remove("fa-x");
+                hamburgerIcon.classList.add("fa-bars");
+                if (window.innerWidth <= 768) {
+                    body.classList.remove("pinned");
+                } else {
+                    mainContent.style.marginLeft = "0";
+                    footer.style.marginLeft = "0";
+                    header.style.marginLeft = "0";
+                }
+                textWithImages.forEach((section, index) => {
+                    section.style.flexDirection = "row";
+                    if (index === 1) {
+                        section.querySelector('.images').style.order = "0";
+                    }
+                });
+                resourceDescriptions.forEach(description => {
+                    description.textContent = description.getAttribute('data-original-text');
+                });
+            } else {
+                if (window.innerWidth <= 768) {
+                    sidebar.style.width = "85%";
+                    body.classList.add("pinned");
+                } else {
+                    sidebar.style.width = "250px";
+                    mainContent.style.marginLeft = "250px";
+                    footer.style.marginLeft = "250px";
+                    header.style.marginLeft = "250px";
+                }
+                hamburgerIcon.classList.remove("fa-bars");
+                hamburgerIcon.classList.add("fa-x");
+                textWithImages.forEach((section, index) => {
+                    section.style.flexDirection = "column";
+                    if (index === 1) {
+                        section.querySelector('.images').style.order = "2";
+                    }
+                });
+                resourceDescriptions.forEach(description => {
+                    if (!description.getAttribute('data-original-text')) {
+                        description.setAttribute('data-original-text', description.textContent);
+                    }
+                    const originalText = description.getAttribute('data-original-text');
+                    if (originalText.length > 108) {
+                        description.textContent = originalText.substring(0, 108) + '...';
+                    } else {
+                        description.textContent = originalText;
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

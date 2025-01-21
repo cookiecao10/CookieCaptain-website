@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieCaptain</title>
+    <link rel="icon" type="image/x-icon" href="icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito%3Ai%2Cbi%2C700%2C300%2C400&amp;display=swap" rel="stylesheet" nonce="">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        window.onload = function() {
+            const sidebar = document.getElementById("mySidebar");
+            const hamburgerIcon = document.querySelector(".hamburger i");
+            const body = document.body;
+            const mainContent = document.querySelector('main');
+            const footer = document.querySelector('footer');
+            sidebar.style.transition = "0s";
+            sidebar.style.width = "0";
+            hamburgerIcon.classList.remove("fa-x");
+            hamburgerIcon.classList.add("fa-bars");
+            body.classList.remove("pinned");
+            mainContent.style.marginLeft = "0";
+            footer.style.marginLeft = "0";
+            setTimeout(() => {
+                sidebar.style.transition = "0.5s";
+            }, 500);
+        }
+    </script>
+    <div class="top-nav-bar">
+        <a href="main.html"><img src="homebutton.png" alt="Logo"></a>
+        <span class="hamburger" onclick="toggleSidebar()"><i class="fas fa-bars"></i></span>
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="main.html">Home</a>
+        <a class="current-page" href="#">Videos</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <header>
+        <h1 data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-once="true">Videos
+        </h1>
+        <p data-aos="fade-up"
+           data-aos-duration="1000"
+           data-aos-delay="300"
+           data-aos-once="true">
+           Watch the latest videos from CookieCaptain
+        </p>
+    </header>
+    <main>
+        <section>
+            <div data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true">
+                <h2>Latest Video</h2>
+                <div id="latest-video" class="photo-card">
+                    <a href="https://www.youtube.com/watch?v=QwKGgQBn_7s" target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-once="true">
+                        <img src="https://i.ytimg.com/vi/QwKGgQBn_7s/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLChiJFAvZXgyg0PYqNt6998MMf6Bw" alt="Video Thumbnail">
+                        <p>CookieCaptain Intro Video</p>
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </section>
+        <section class="photo-card-section">
+            <div data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-once="true">
+                <h2>All Videos</h2>
+                <div class="photo-card">
+                    <a href="https://www.youtube.com/watch?v=QwKGgQBn_7s" target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-once="true">
+                        <img src="https://i.ytimg.com/vi/QwKGgQBn_7s/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLChiJFAvZXgyg0PYqNt6998MMf6Bw" alt="Video Thumbnail">
+                        <p>CookieCaptain Intro Video</p>
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </section>
+    </main>
+    <footer>
+        <a class="footer-text" href="main.html">&copy; CookieCaptain</a>
+        <div class="icons"><a href="https://www.youtube.com/@CookieCaptain"target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/people/CookieCaptain/61571955525210/" target="_blank"><i class="fab fa-facebook"></i></a></div>
+        <a class="footer-contact-info" href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a>
+    </footer>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const hamburgerIcon = document.querySelector(".hamburger i");
+            const body = document.body;
+            const mainContent = document.querySelector('main');
+            const footer = document.querySelector('footer');
+            const header = document.querySelector('header');
+            const textWithImages = document.querySelectorAll('.text-with-images');
+            const resourceDescriptions = document.querySelectorAll('.photo-card .description');
+            if (sidebar.style.width === "85%" || sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                hamburgerIcon.classList.remove("fa-x");
+                hamburgerIcon.classList.add("fa-bars");
+                if (window.innerWidth <= 768) {
+                    body.classList.remove("pinned");
+                } else {
+                    mainContent.style.marginLeft = "0";
+                    footer.style.marginLeft = "0";
+                    header.style.marginLeft = "0";
+                }
+                textWithImages.forEach((section, index) => {
+                    section.style.flexDirection = "row";
+                    if (index === 1) {
+                        section.querySelector('.images').style.order = "0";
+                    }
+                });
+                resourceDescriptions.forEach(description => {
+                    description.textContent = description.getAttribute('data-original-text');
+                });
+            } else {
+                if (window.innerWidth <= 768) {
+                    sidebar.style.width = "85%";
+                    body.classList.add("pinned");
+                } else {
+                    sidebar.style.width = "250px";
+                    mainContent.style.marginLeft = "250px";
+                    footer.style.marginLeft = "250px";
+                    header.style.marginLeft = "250px";
+                }
+                hamburgerIcon.classList.remove("fa-bars");
+                hamburgerIcon.classList.add("fa-x");
+                textWithImages.forEach((section, index) => {
+                    section.style.flexDirection = "column";
+                    if (index === 1) {
+                        section.querySelector('.images').style.order = "2";
+                    }
+                });
+                resourceDescriptions.forEach(description => {
+                    if (!description.getAttribute('data-original-text')) {
+                        description.setAttribute('data-original-text', description.textContent);
+                    }
+                    const originalText = description.getAttribute('data-original-text');
+                    if (originalText.length > 108) {
+                        description.textContent = originalText.substring(0, 108) + '...';
+                    } else {
+                        description.textContent = originalText;
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
